@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  webserver:
+    build: .
+    image: ngnix
+    ports:
+      -"8090:80"
+    volumes:
+      - ./cloud /usr/share/ngnix/html
+    container_name: html-container
