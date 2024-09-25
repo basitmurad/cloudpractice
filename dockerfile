@@ -1,5 +1,5 @@
-FROM ngnix:latest
+FROM nginx:latest 
 
-COPY ./cloud /usr/share/ngnix/html
+COPY ./cloud /usr/share/nginx/html
 
-EXPOSE 8090
+EXPOSE 80  

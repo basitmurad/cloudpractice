@@ -1,11 +1,9 @@
-version: '3.8'
-
 services:
   webserver:
     build: .
-    image: ngnix
+    image: html-container  # Name of your image
     ports:
-      -"8090:80"
+      - "8090:80"  # Map port 80 in the container to port 8090 on the host
     volumes:
-      - ./cloud /usr/share/ngnix/html
+      - ./cloud:/usr/share/nginx/html  # Bind mount the cloud directory
     container_name: html-container
